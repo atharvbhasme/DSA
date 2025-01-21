@@ -2,7 +2,7 @@
 DSA Practise problems in java
 
 ### Number System
-- [ ] Count the number
+- [x] Count the number
 - [ ] Palindrome
 - [ ] Reverse the number
 
@@ -16,3 +16,6 @@ DSA Practise problems in java
 - [ ] Rotated Triangle
 - [ ] Seeding
 - [ ] Triangle
+- [ ] Symmetric-Butterfly Pattern
+- [ ] Hollow loop
+- [ ] Number Pattern
