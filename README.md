@@ -26,3 +26,6 @@ DSA Practise problems in java
 - [x] Print GFG
 - [x] Print Sum of N terms
 - [x] Print Factorial Less Than N
+- [x] Pallindrome using recursion
+- [x] Fibonacci using recursion
+- [x] Reverse array using recursion
