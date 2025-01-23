@@ -6,7 +6,6 @@ public class countTheNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int count = 0;
         int copy = n;
         while(n>0){
             int digit = n%10;
@@ -15,7 +14,6 @@ public class countTheNumber {
                 continue;
             }
             if(copy % digit == 0){
-                count ++;
             }
             n = n/10;
         }
