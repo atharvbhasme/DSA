@@ -16,6 +16,7 @@ public class numberpattern {
                 System.out.print(n- Math.min(Math.min(top, bottom),Math.min(left, right)));
             }
             System.out.println();
-        }    
+        }  
+        sc.close();  
     }
 }

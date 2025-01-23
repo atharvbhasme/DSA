@@ -37,5 +37,6 @@ public class sysmetricbutterfly {
                 spaces += 2;
             }
         }
+        sc.close();
     }   
 }

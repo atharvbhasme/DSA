@@ -8,6 +8,7 @@ public class printGFG {
         System.out.println("Please, Enter the number N!");
         int n = sc.nextInt();
         printgfg(n);
+        sc.close();
     }
 
     public static void printgfg(int n){

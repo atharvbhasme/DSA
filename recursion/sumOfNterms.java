@@ -9,6 +9,7 @@ public class sumOfNterms {
         int n = sc.nextInt();
         int value = sumOfSeries(n);
         System.out.println(value);
+        sc.close();
     }
 
     public static int sumOfSeries(int n) {

@@ -7,6 +7,7 @@ public class printOneToN {
         System.out.println("Please, Enter the number N!");
         int n = sc.nextInt();
         printN(n);
+        sc.close();
     }
 
     public static void printN(int n){

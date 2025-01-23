@@ -1,5 +1,6 @@
+package pattern;
+
 import java.util.Scanner;
-import java.io.*;
 
 public class nforest{
     public static void main(String[] args){
@@ -11,5 +12,6 @@ public class nforest{
             }
             System.out.println();
         }
+        sc.close();
     }
 }

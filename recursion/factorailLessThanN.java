@@ -9,6 +9,7 @@ public class factorailLessThanN {
         System.out.println("Please, Enter the number N!");
         int n = sc.nextInt();
         System.out.println(factorialNumbers(n));
+        sc.close();
     }
 
     static void helperFunction(long n, long fact, int i, ArrayList<Long> result){

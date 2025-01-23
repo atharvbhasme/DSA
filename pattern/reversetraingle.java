@@ -17,5 +17,6 @@ public class reversetraingle {
             }
             System.out.println();
         }
+        sc.close();
     }
 }

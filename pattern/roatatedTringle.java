@@ -14,5 +14,6 @@ public class roatatedTringle {
              }
              System.out.println();
         }
+        sc.close();
     }
 }

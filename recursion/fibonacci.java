@@ -8,6 +8,7 @@ public class fibonacci {
         System.out.println("Enter the number");
         int n = sc.nextInt();
         System.out.println(fib(n));
+        sc.close();
     }
 
     public static int fib(int n) {

@@ -19,5 +19,6 @@ public class countTheNumber {
             }
             n = n/10;
         }
+        sc.close();
     }
 }

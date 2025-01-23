@@ -12,5 +12,6 @@ public class reversenumbertriangle {
             }
             System.out.println();
          }
+         sc.close();
     }
 }

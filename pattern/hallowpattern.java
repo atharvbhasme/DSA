@@ -16,5 +16,6 @@ public class hallowpattern {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
