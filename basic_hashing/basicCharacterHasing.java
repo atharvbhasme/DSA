@@ -9,7 +9,7 @@ public class basicCharacterHasing {
         System.out.println("Enter the string");
         String input = sc.nextLine();
 
-        char[] hashArray = new char[256];
+        int[] hashArray = new int[256];
         for (int i = 0; i < input.length(); i++) {
             hashArray[input.charAt(i)]++;
         }

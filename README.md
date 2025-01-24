@@ -2,9 +2,10 @@
 DSA Practise problems in java
 
 ### Number System
-- [x] Count the number
+- [x] Count the Digit
 - [x] Palindrome
 - [x] Reverse the number
+- [x] Roman to integer
 
 ### Pattern
 - [x] diamond
@@ -29,3 +30,8 @@ DSA Practise problems in java
 - [x] Pallindrome using recursion
 - [x] Fibonacci using recursion
 - [x] Reverse array using recursion
+
+### Hashing
+- [x] Find the common number in array
+- [x] Find the common character in array
+- [x] Find the count frequency in array
