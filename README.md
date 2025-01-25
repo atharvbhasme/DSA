@@ -34,7 +34,14 @@ DSA Practise problems in java
 - [x] Fibonacci using recursion
 - [x] Reverse array using recursion
 
-### Hashing
+### [Hashing](basic_hashing/basic_hashing.md)
 - [x] Find the common number in array
 - [x] Find the common character in array
 - [x] Find the count frequency in array
+
+### [Sorting](sorting/sorting.md) 
+- [x] Selection Sort
+- [X] Recursive Selection Sort
+- [x] Bubble Sort
+- [x] Optimised Bubble Sort (In Best Case Situation)
+- [x] Insertion Sort
