@@ -73,3 +73,66 @@ we will make hash array of size 256
         }
 ```
 
+#### How to use HashMap to solve the problems
+
+We may encounter a problem where the maximum array element may be very large like 109. In that case, theoretically, we should declare an array of size 109+1. But we cannot do so we are using HashMaps Collections in java. The maximum size of an array can be the following:
+
+![alt text](image.png)
+
+Hashing is done using many methods some of them are
+- Division Method
+- Folding Method
+- Mid-square Method
+
+##### Division Method
+
+This is division method. In order to solve this we will use the division method. We will simply consider the modulo 10 of each element of the array(element % 10) and we will hash(pre-store and fetch) the elements on the basis of the modulo value i.e. the remainder. The steps will look like the following:
+
+`Pre storing: hash[arr[i]%10] += 1 and Fetching: hash[number%10]`
+
+ For same numbers we are using linear chaining like linked list show in daigram.
+
+![alt text](image-1.png)
+
+Collision
+Now, if we are applying linear chaining and division rule and we find that all elements of an array get stored in a single index, then we will call it a case of collision.
+
+example
+
+![alt text](image-2.png)
+
+**Maximum time it will take will be O(n) and minimum time it will be O(1) for unordered hashmap**
+
+**For Ordered HashMaps it will take logO(n)**
+
+```
+//precompute:
+        HashMap<Integer, Integer> mp = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            int key = arr[i];
+            int freq = 0;
+            if (mp.containsKey(key)) freq = mp.get(key); // fetching from the map
+            freq++;
+            mp.put(key, freq); // inserting into the map
+        }
+
+        // Iterate over the map:
+        /*
+        for (Map.Entry<Integer, Integer> it : mp.entrySet()) {
+            System.out.println(it.getKey() + "->" + it.getValue());
+        }
+        */
+
+        int q;
+        q = sc.nextInt();
+        while (q-- > 0) {
+            int number;
+            number = sc.nextInt();
+            // fetch:
+            if (mp.containsKey(number)) System.out.println(mp.get(number));
+            else System.out.println(0);
+        }
+```
+
+
+

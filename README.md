@@ -6,6 +6,9 @@ DSA Practise problems in java
 - [x] Palindrome
 - [x] Reverse the number
 - [x] Roman to integer
+- [x] Prime numbers
+- [x] GCD or HCF
+- [x] All Divisors 
 
 ### Pattern
 - [x] diamond
