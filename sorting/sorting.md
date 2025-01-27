@@ -127,3 +127,59 @@ Average   O(n^2)\
 Worst     O(n^2)
 
 If it get the sorted array which is best case then it will run only time no inner while loop will be run
+
+-----
+### Merge Sort
+**Divide and Merge**
+
+sudo code
+
+```java
+ public static void mSort(int[] arr, int low, int high){//Dvivide the array using recurssion until it come to single digit
+        if(low == high) return;
+        int mid = (low + high) / 2;
+        mSort(arr, low, mid);
+        mSort(arr, mid + 1, high);
+        merg(arr, low, mid, high);
+    }
+
+    public static void merg(int[] arr, int low, int mid, int high){
+        ArrayList<Integer> temp = new ArrayList<Integer>();//temp array to merge the two sorted array
+        int left = low;
+        int right = mid + 1;
+        while(left<=mid && right<=high){  
+            if(arr[left]<=arr[right]){
+                temp.add(arr[left]);
+                left++;
+            }else{
+                temp.add(arr[right]);
+                right++;
+            }
+        }
+
+        while(left<=mid){
+            temp.add(arr[left]);
+            left++;
+        }
+
+        while (right<=high) {
+            temp.add(arr[right]);
+            right++;
+        }
+
+        for (int index = low; index <= high ; index++) { // assiging temp array to original array in order
+            arr[index] = temp.get(index - low);
+        }
+    }
+```
+
+**Time Complexity**/
+Best      O(nlogn)\
+Average   O(nlogn)\
+Worst     O(nlogn)
+
+**Space Complexity**\
+O(n)
+
+-----
+
