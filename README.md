@@ -45,3 +45,11 @@ DSA Practise problems in java
 - [x] Bubble Sort
 - [x] Optimised Bubble Sort (In Best Case Situation)
 - [x] Insertion Sort
+- [x] Merge Sort
+- [x] Quick Sort
+
+### [Arrays](Arrays/arrays.md)
+- [x] Find Largest Element in array
+- [x] Find the second largest Element
+- [x] Is Array sorted
+- [x] Remove the duplicate element from array
