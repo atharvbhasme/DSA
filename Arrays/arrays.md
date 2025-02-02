@@ -10,7 +10,7 @@ for gloabllay = 10^7
 
 ### Problmes
 
-1) Find the Larget Element in array
+1) Find the Larget Element in array\
    
    Brute Force Apporach:
    Sort the arrya and find the last index element which will be largest
@@ -26,7 +26,7 @@ for gloabllay = 10^7
    return max;
    ```
 
-2) Find the second largest element in array
+2) Find the second largest element in array \
    Brute Force Apporach:
    Sort the array in asecnding order and find the second last element in array
 
@@ -45,7 +45,7 @@ for gloabllay = 10^7
    return secondLargest;
    ```
 
-3) Check if array is sorted or not
+3) Check if array is sorted or not\
    Brute Force Apporach
    ```java
    for (int i = 0; i < n; i++) {
@@ -69,7 +69,7 @@ for gloabllay = 10^7
    ```
 
 
-4) Remove the duplicate from sorted array
+4) Remove the duplicate from sorted array \
    Brute Force Apporach (Will take more time and space)
    ```java
    HashSet < Integer > set = new HashSet < > ();
@@ -96,7 +96,7 @@ for gloabllay = 10^7
    return i+1; //this will return the index with array that are not asorted see code for better understading 
    ```
 
-5) Left Rotate array by one place [code](Arrays/code5.java)
+5) Left Rotate array by one place [code](Arrays/code5.java)\
    Optimal Apporach
    ```java
    public static void leftRotate(int[] arr){
@@ -113,7 +113,7 @@ for gloabllay = 10^7
     }
    ```
 
-6) Reverse Array [Code](Arrays/code7.java)
+6) Reverse Array [Code](Arrays/code7.java)\
    Optimal Apporach
    ```java
     public static void reverseArray(int[] arr){
@@ -130,7 +130,7 @@ for gloabllay = 10^7
    ```
 
 
-7) Rotate the array to left by k elements [code](Arrays/code6.java)
+7) Rotate the array to left by k elements [code](Arrays/code6.java) \
    brute force apporach (Using a temp array)
    steps:
    1. Copy the last k elements into the temp array.
@@ -154,7 +154,7 @@ for gloabllay = 10^7
     for (int i = 0; i < k; i++) {
       arr[i] = temp[i];
     }
-  }
+   }
    ```
 
    Optimal Apporach
@@ -189,7 +189,7 @@ for gloabllay = 10^7
     }
    ```
 
-8) Move zeros to end [code](Arrays/code8.java)
+8) Move zeros to end [code](Arrays/code8.java)\
    Brute Force
    steps
    1. move all non zero elements in arraylist
@@ -248,7 +248,7 @@ for gloabllay = 10^7
     }
    ```
 
-9) Find the frist occurrence of element in array [code](Arrays/code9.java)
+9) Find the frist occurrence of element in array [code](Arrays/code9.java)\
    code
    ```java
    public static int findOccurrence(int[] arr, int k){
@@ -261,7 +261,7 @@ for gloabllay = 10^7
     }
    ```
 
-10) Union of two sorted arrays (Only return distinct element from both arrays) [code](Arrays/code10.java)
+10) Union of two sorted arrays (Only return distinct element from both arrays) [code](Arrays/code10.java)\
     Brute Force Approach
     1. use set to store array element of both arrays
     2. then use add those set element to ans aray
@@ -333,7 +333,7 @@ for gloabllay = 10^7
     Space Complexity : O(m+n)
 
 
-11) Intersection of two Arrays [code](Arrays/code11.java)
+11) Intersection of two Arrays [code](Arrays/code11.java)\
    better solution
    ```java
    public static int[] intersectionArrays(int[] arr1, int[] arr2){
@@ -363,7 +363,7 @@ for gloabllay = 10^7
     }
    ```
 
-   optimal solution
+   optimal solution\
    code
    ```java
      public static ArrayList < Integer > intersectionOfArrays(int[] A, int[] B) {
