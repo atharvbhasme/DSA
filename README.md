@@ -53,3 +53,11 @@ DSA Practise problems in java
 - [x] Find the second largest Element
 - [x] Is Array sorted
 - [x] Remove the duplicate element from array
+- [x] Left Rotate an array by one place
+- [x] Left rotate an array by D places
+- [x] Move Zeros to end
+- [x] Linear Search
+- [x] Find the union
+- [x] Find missing numbers in array
+- [x] Maximum consucetive ones
+- [x] Find the number that appears once, and other numbers twice.
