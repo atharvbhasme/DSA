@@ -387,3 +387,145 @@ for gloabllay = 10^7
         return ans;
     }
    ```
+
+12) Find the missing numbers if givien array of n numbers. [code](Arrays/code12.java)\
+  Brute Force
+  code
+  ```java
+  public static int findMissingNumber(int[] arr, int n){
+        // Brute Force
+        for (int i = 1; i <= n; i++) {
+            int flag = 0;
+            for (int j = 0; j < n-1; j++) {
+                if(arr[j] == i){
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag == 0){
+                return i;
+            }
+        }
+        return -1;
+    }
+  ```
+  Time Complexity: O(n^2)\
+
+  Better Solution
+  code
+  ```java
+   public static int findMissingNumber(int[] arr, int n){
+        // Better Solution -> Use Hashing
+        // prestore the data
+        int[] hs = new int[n + 1];
+        for (int i = 0; i <  arr.length; i++) {
+            hs[arr[i]] += 1;
+        }
+
+        // fetch the data
+        for (int i = 1; i < n; i++) {
+            if(hs[i] == 0){
+                return i;
+            }
+        }
+        return -1;
+    }
+  ```
+  Time Complexity: O(n+n) ~= O(n)
+  Space Complexity: O(n) 
+
+  Optimal Solution \
+  There will be two optimal solutions
+  1) Sum method
+  code
+  ```java
+   public static int findMissingNumber(int[] arr, int n){
+        // optimal solution
+        // 1) Sum method
+        int sumOfN = (n * (n + 1)) / 2;
+        int sumOfArray = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sumOfArray = arr[i] + sumOfArray;
+        }
+        int ans = sumOfN - sumOfArray;
+        return ans;
+    }
+  ```
+
+  2) XOR method (Bit manupulation watch when bit manipulation videos)
+
+  3) Also I think there is another cyclic array method watch kunal kushwaha cyclic array video of java
+
+13) Count Maximum Consecutive One's in the array [code](Arrays/code13.java)\
+  Optimal Apporach
+  code
+  ```java
+  public static int findConsecutiveOne(int[] arr){
+        int count = 0;
+        int maxCount = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] == 1){
+                count++;
+                if(count > maxCount){
+                    maxCount = count;
+                }
+            }else{
+                count = 0;
+            }
+        }
+        return maxCount;
+    }
+  ```
+
+14) Find the number that appears once, and the other numbers twice [code](Arrays/code14.java)\
+   1) Hash apporach for non negative numbers
+   code
+   ```java
+   int n = arr.length;
+        int[] hs = new int[n + 1];
+        // pre store
+        for (int i = 0; i < n; i++) {
+            hs[arr[i]] += 1;
+        }
+
+        int ans = 0;
+        for (int i = 0; i < hs.length; i++) {
+            if (hs[i] == 1) {
+                ans = i;
+            }
+        }
+        return ans;
+    }
+   ```
+
+   2) Hash Apporach for negative numbers also
+   code
+   ```java
+   public int singleNumber(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        // Count occurrences of each number
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        // Find the element that appears only once
+        for (int num : nums) {
+            if (map.get(num) == 1) {
+                return num;
+            }
+        }
+
+        return -1; // Should never reach here for valid input
+    }
+   ```
+
+   3) XOR apporach (Learn bit manipulation)
+   code
+   ```java
+    int result = 0;
+        for (int num : nums) {
+            result ^= num; // XOR cancels out duplicates
+        }
+        return result;
+   ```
