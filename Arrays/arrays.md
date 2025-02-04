@@ -529,3 +529,77 @@ for gloabllay = 10^7
         }
         return result;
    ```
+
+15) Longest Subarray with given Sum K(Positives) [code](Arrays/code15.java)\
+   Brute Force
+   code
+   ```java
+    public static int findLogestSubArray(int[] arr, int k){
+        int ans = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int maxSum = 0;
+            for (int j = i; j < arr.length; j++) {
+                maxSum += arr[j];
+                if(maxSum == k){
+                    ans = Math.max(ans, j-i+1);
+                }
+            }
+        }
+        return ans;
+        
+    }
+   ```
+
+   Better HashMap
+   code
+   ```java
+   public static int findLogestSubArray(int[] arr, int k){
+        HashMap<Integer, Integer> hs = new HashMap<>();
+        int len = 0;
+        Integer sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (sum == k) {
+                len = Math.max(len, i+1);
+            }
+
+            int rem = sum - k;
+
+            if(hs.containsKey(sum)){
+                int currentLen = i - hs.get(rem);
+                len = Math.max(len, currentLen);
+            }
+
+            if(!hs.containsKey(rem)){
+                hs.put(sum, i);
+            }
+        }
+        return len;
+    }
+   ```
+
+   Optimal Solution Two pointer method (but does not handle negative numbers)
+   code
+   ```java
+   public static int findLogestSubArray(int[] arr, int k){
+        int left = 0;
+        int right = 0;
+        int sum = arr[0];
+        int maxLen = 0;
+        while(right<arr.length){
+            sum += arr[right];
+            
+            while (sum > k && left <= right) {
+                sum -= arr[left];
+                left++;
+            }
+
+            if(sum == k){
+                maxLen = Math.max(maxLen, right - left + 1);
+            }
+
+            right++; 
+        }
+        return maxLen;
+    }
+   ```
