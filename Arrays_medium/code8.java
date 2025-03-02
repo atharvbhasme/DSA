@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class code8 {
     public static void main(String[] args) {
-        int[] arr = {1,2,-3,-1,-2,3};
+        int[] arr = {1,2,-3,-1,-2,-3};
         rearrangeArrayPostiveNegative(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -21,15 +21,25 @@ public class code8 {
                 negativeNumber.add(arr[i]);
             }
         }
-        int pst = 0;
-        int ngt = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if(i%2==0){
-                arr[i] = postiveNumber.get(pst);
-                pst++;
-            }else{
-                arr[i] = negativeNumber.get(ngt);
-                ngt++;
+        if(postiveNumber.size() > negativeNumber.size()){
+            for (int i = 0; i < negativeNumber.size(); i++) {
+                arr[i * 2] = postiveNumber.get(i);
+                arr[(i * 2)+1] = negativeNumber.get(i);
+            }
+            int index = negativeNumber.size() * 2;
+            for (int i = index; i < postiveNumber.size(); i++) {
+                arr[index] = postiveNumber.get(i);
+                index++;
+            }
+        }else{
+            for (int i = 0; i < postiveNumber.size(); i++) {
+                arr[i * 2] = postiveNumber.get(i);
+                arr[(i * 2)+1] = negativeNumber.get(i);
+            }
+            int index = postiveNumber.size() * 2;
+            for (int i = index; i < negativeNumber.size(); i++) {
+                arr[index] = negativeNumber.get(i);
+                index++;
             }
         }
     }
