@@ -1,6 +1,6 @@
 # Arrays
 
-1) Two Sum 
+1) Two Sum [code](Arrays_medium/code1.java) \
   Brute Force
   code
   ```java
@@ -291,5 +291,129 @@
     Time Complexity: O(N)\
     Space Complexity: O(1)
 
-6) Maximum Score from Subarray Minimums
-   
+6) Maximum Score from Subarray Minimums [code](Arrays_medium/code6.java)\
+   code 
+   ```
+   public static int findSumofMaxSubArray(int[] arr){
+      int i = 0;
+      int j = 1;
+      int sum = 0;
+      int n = arr.length;
+      int maxi = Integer.MIN_VALUE;
+      while(j<n){
+        sum = arr[i] + arr[j];
+        maxi = Math.max(sum, maxi);
+        i++;
+        j++;
+      }
+      return maxi;
+    }
+   ```
+
+7) Stock Buy and Sell [code](Arrays_medium/code7.java)\
+    code
+    ```
+    public static int stockBuyAndSell(int[] arr){
+        int maxProfit = 0;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            min = Math.min(min, arr[i]);
+            maxProfit = Math.max(maxProfit, arr[i] - min);
+        }
+        return maxProfit;
+    }
+    ```
+
+8) Next Permutation [code](code9.java)\
+  code
+  ```
+    public static void nextPermutation(int[] nums) {
+        int n = nums.length;
+        int ind = -1;
+
+        // Step 1: Find the breakpoint where nums[i] < nums[i+1]
+        for (int i = n - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
+                ind = i;
+                break;
+            }
+        }
+
+        // If no breakpoint found, reverse the whole array (last permutation case)
+        if (ind == -1) {
+            reverse(nums, 0, n - 1);
+            return;
+        }
+
+        // Step 2: Find the next larger element to swap with nums[ind]
+        for (int i = n - 1; i > ind; i--) {  // Fix: Iterate till `n-1`
+            if (nums[i] > nums[ind]) {
+                swap(nums, i, ind);
+                break;
+            }
+        }
+
+        // Step 3: Reverse the portion after ind (to get the next lexicographic permutation)
+        reverse(nums, ind + 1, n - 1);
+    }
+
+    // Utility function to reverse part of the array in-place
+    public static void reverse(int[] arr, int start, int end) {
+        while (start < end) {
+            swap(arr, start, end);
+            start++;
+            end--;
+        }
+    }
+
+    // Utility function to swap two elements
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+  ```
+
+10) Leaders in Array [code](code10.java)\
+  code
+  ```
+  public static ArrayList<Integer> leadersInArray(int[] arr){
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+        int n = arr.length;
+        int maxi = Integer.MIN_VALUE;
+        for (int i = n-1; i >= 0; i--) {
+            if(arr[i] >= maxi){
+                ans.add(arr[i]);
+            }
+            maxi = Math.max(maxi, arr[i]);
+        }
+        Collections.reverse(ans);
+        return ans;
+    }
+  ```
+
+11) Longest Consecutive Sequence in an Array [code](code11.java)\
+  code
+  ```
+  public static int longestSeq(int[] arr){
+        int n = arr.length;
+        if(n==0) return 1;
+        int longest = 1;
+        Set<Integer> hs = new HashSet<>();
+        for (int i = 0; i < arr.length; i++) {
+            hs.add(arr[i]);
+        }
+        for(int it:hs){
+            if(!hs.contains(it-1)){
+                int cnt = 1;
+                int x = it;
+                while(hs.contains(x+1)){
+                    x = x + 1;
+                    cnt = cnt + 1;
+                }
+                longest = Math.max(longest, cnt);
+            }
+        }
+        return longest;
+    }
+  ```   
