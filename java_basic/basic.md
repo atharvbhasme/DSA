@@ -50,4 +50,6 @@ There are 67 Keywords in Java.
 - Which is primitive data types
     Primitive data types are the types in java that can store a single value and do not provide any special capability. 
 
-- 
+### Java Flow Control [Code](FlowControl.java)
+
+### Java Methods
