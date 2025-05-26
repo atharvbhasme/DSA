@@ -50,4 +50,24 @@ There are 67 Keywords in Java.
 - Which is primitive data types
     Primitive data types are the types in java that can store a single value and do not provide any special capability. 
 
-- 
+### Java Flow Control [Code](FlowControl.java)
+
+### Java Methods [code](Methods.java)
+  **What is functions: Block of code that perform specific task**\
+  **All methods in Java must belong to a class. Methods are similar to functions and expose the behavior of objects.**
+  
+  Syntax of Method
+  ```
+      <access_modifier> <return_type> <method_name>( list_of_parameters)
+    {
+        //body
+    }
+  ```
+
+ - Static variables/methods can be accessed without an object (they belong to the class).
+ -  Non-static variables/methods require an object to access them (they belong to an instance of the class).
+ - You can mix static and non-static members, but you need to understand that static members are accessible without objects, 
+and non-static members are accessible only through an object.
+
+### Java Access Modifiers
+![img.png](img.png)
