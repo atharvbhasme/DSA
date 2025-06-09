@@ -2,7 +2,7 @@ package Linked_List;
 import java.util.Arrays;
 import java.util.List;
 
-public class insertionAtHeadClassSLL {
+public class InsertionAtHeadClassSLL {
     public static void printSLL(Node head){
         while (head != null) {
             System.out.println("value "+ head.data);

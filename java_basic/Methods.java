@@ -1,12 +1,5 @@
 package java_basic;
 
-public class Methods {
-    public static void main(String[] args) {
-        Demo dm = new Demo();
-        Demo.staticMethod();
-    }
-}
-
 class Demo {
    //creating constructor
     static int a;

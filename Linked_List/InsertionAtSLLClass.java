@@ -1,6 +1,6 @@
 package Linked_List;
 
-public class insertionAtSLLClass {
+public class InsertionAtSLLClass {
     
     public static Node insertData(Node head, int pos, int data){
         // create the object of node
