@@ -1,7 +1,8 @@
-package Linked_List;
+package Linked_List.DLL;
 
 import java.util.Arrays;
 import java.util.List;
+
 
 public class DoublyLinkedListIntroClass {
 
