@@ -7,7 +7,7 @@
 3. Key Implementations
 4. Utility Classes
 
-
+---------
 **Knowledge required before learning java collection**
 - [ ] Java classes
 - [ ] Java interfaces
@@ -54,4 +54,6 @@ An implementation is a concrete class that provides the actual working code behi
 | `Queue`   | ✅ Yes             | ✅ Yes (FIFO)             | First-In-First-Out |
 | `Map`     | ❌ (keys)          | ❌ (unless LinkedHashMap) | Key-value storage  |
 
-     
+------
+
+### Core Implementatios of Collections
